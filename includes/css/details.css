@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+}
+
+/* image coloum */
+.product-image {
+    float: left;
+    width: 50%;
+    height: auto;
+    background-size: contain; 
+    padding-left: 150px;
+    padding-top: 60px;
+}
+/* text coloum */
+.product-text {
+    float: left;
+    padding: 10px;
+    width: 50%;
+    padding-right: 200px;
+    padding-top: 30px;
+}
+/* Title Styling */
+h1{
+    font-size: 40px;
+}
+/* Price Styling */
+h2{
+    font-size: 30px;
+}
+/* Description Styling */
+h3{
+    font-size: 20px
+}
+
+/* fav button */
+.fav-button {
+    background-color: #f0d800;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    text-decoration: none;
+}
+/* info button on hover */
+.fav-button:hover {
+    font-weight: bold;
+}
+
+/* more info button */
+.back-button {
+    background-color: #f0d800;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    text-decoration: none;
+}
+/* info button on hover */
+.back-button:hover {
+    font-weight: bold;
+}
+
+  /* food items container*/
+.div_details_text { 
+    font-size: 20px;
+    padding-left: 500px;
+    padding-right: 500px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 1400px) {
+    .product-image {
+        width: 50%;
+        padding-left: 100px;
+    }
+    .product-text {
+        width: 50%;
+        padding-left: 20px;
+        padding-right: 100px;
+
+    }
+}
+@media screen and (max-width: 880px) {
+    .product-image {
+        width: 100%;
+        padding-left: 100px;
+    }
+    .product-text {
+        width: 100%;
+        padding-left: 100px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .product-image {
+        width: 100%;
+    }
+    .product-text {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .product-image {
+        width: 100%;
+        float:none;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .product-text {
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+.responsive-pic {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+  }
