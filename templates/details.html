@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="nav-bar">
+        <a href="index.php" class="logo">CompanyLogo</a>
+        <div class="nav-bar-right">
+            <a href="menu.php">Menu</a>
+            <a href="favs.php">Favourites</a>
+            <a href="contact.hmtl">Contact</a>
+            <a href="about.html">About</a>
+        </div>
+    </div>
+
+    {% for food in getfood %}
+        <div class="row">
+            <div class="product-image">
+                <img src="{{ food.itemImage }}" alt="{{ food.Title }}" style="width:70%">
+            </div>
+            
+            <div class="product-text">
+
+                <h1>{{ food.Title }}</h1>
+                
+                <h3>Description</h3>
+                <p>{{ food.itemDesc }}</p>
+                <h3>Ingredients</h3> 
+                <p>{{ food.itemIngr }}</p>   
+
+                <h2>€{{ food.Price }}</h2>
+
+                <form action="includes/sql/add_fav.php" method="POST">
+                    <input type="hidden" name="foodID" value="{{ food.ID }}" />
+                                        
+                    <button class="fav-button" type="submit" name="add_fav">Add to Favorites</button>
+                    <br>
+                </form>
+
+                <br>
+                <a href="menu.php" class="back-button">Back</a>
+            </div>
+
+            <p></p>
+        </div>
+
+
+    {% endfor %}
+{% endblock %}

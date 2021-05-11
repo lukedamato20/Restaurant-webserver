@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="nav-bar">
+        <a href="index.php" class="logo">CompanyLogo</a>
+        <div class="nav-bar-right">
+            <a href="menu.php">Menu</a>
+            <a class="active" href="favs.php">Favourites</a>
+            <a href="contact.hmtl">Contact</a>
+            <a href="about.html">About</a>
+        </div>
+    </div>
+    
+    <div class="favs-bg">
+        <div class="div_title">
+          <span class="border">Favourites</span>
+        </div>
+      </div>
+
+    {% for food in getfood %}
+        <div class="div-container">
+            <div class="fav_div_text">
+                <h2 style="text-align:left;">{{ food.Title }}
+                    <span style="float:right;">
+                        <a href="details.php?a={{ food.id }}" class="info-button">
+                            <span>€ {{ food.Price }} </span>
+                        </a> 
+                    </span>
+                </h2>
+            </div>
+            <div class="fav_details_text">
+                <p style="text-align:left;">{{ food.itemIngr }}
+                    <span style="float:right;">
+
+                        <form action= "includes/sql/remove_fav.php" method="POST">
+                            <input type="hidden" name="foodID" value="{{ food.ID }}" />
+                                        
+                            <button class="remove-button" type="submit" name="remove_fav">Remove Item </button>
+                            <br>                        
+                        </form> 
+                    </span>
+                </p>
+            </div>
+        </div>
+    {% endfor %}
+
+    </br>
+    </br>
+    <hr class="solid">
+
+    <div class="contact-text">
+        <p style="font-size: 30px; font-weight: bold;" >Share your form with yourself or anyone: </p>
+        <p style="font-size: 20px;">Enter the recipient's email and an optional message...</p>
+    </div>
+    
+    </br>
+
+    <div class="fav_form">
+        <form action="" method="POST">
+            <input type="text" name="email" placeholder="Email" required /> </br>
+            <input type="text" name="message" placeholder="Message" required /> </br>
+            <input type="submit" value="Share"/>
+        </form>
+    </div>
+
+    </br>
+    </br>
+    <hr class="solid">
+    </br>
+    </br>
+
+    <div class="footer">
+        <h2>Footer</h2>
+    </div>
+{% endblock %}

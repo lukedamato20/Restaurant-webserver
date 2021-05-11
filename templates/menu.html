@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="nav-bar">
+        <a href="index.php" class="logo">CompanyLogo</a>
+
+        <div class="nav-bar-right">
+            <a class="active" href="menu.php">Menu</a>
+            <a href="favs.php">Favourites</a>
+            <a href="contact.hmtl">Contact</a>
+            <a href="about.html">About</a>
+        </div>
+    </div>
+    
+    {% for food in getfood %}
+        <div class="div_title">
+            <!-- <span class="border">{{food.categTitle}}</span> -->
+        </div>
+
+        <div class="container">
+            <div class="div_text">
+                <h2 style="text-align:left;">{{ food.Title }}
+                    <span style="float:right;">
+                        <a href="details.php?a={{ food.id }}" class="info-button">
+                            <span>€ {{ food.Price }}</span>
+                        </a> 
+                    </span>
+                </h2>
+            </div>
+        </div>
+    {% endfor %}
+
+    </br>
+    </br>
+    <hr class="solid">
+    </br>
+
+    <div class="footer">
+        <h2>Footer</h2>
+    </div>
+{% endblock %}
