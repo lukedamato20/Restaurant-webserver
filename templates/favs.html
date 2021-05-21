@@ -36,9 +36,11 @@
             </div>
         </div>
     {% endfor %}
-    <hr class="solid">
 
     </br>
+    <hr class="solid">
+    </br>
+    
     <!-- Remove all button -->
     <form class="fav_form" action= "includes/php/remove_all.php" method="POST">
         <form action="" method="POST">
@@ -57,8 +59,8 @@
     </br>
 
     <!-- Share list form -->
-    <div class="fav_form" action= "includes/php/send_mail.php" method="POST">
-        <form action="" method="POST">
+    <div class="fav_form">
+        <form class="fav" action="includes/php/send_mail.php" method="POST">
             <input type="text" name="email" placeholder="Email" required /> </br>
             <input type="text" name="message" placeholder="Message" required /> </br>
             <input type="hidden" name="foodID" value="{{ food.ID }}" />
@@ -67,7 +69,6 @@
         </form>
     </div>
 
-    </br>
     </br>
     <hr class="solid">
     </br>

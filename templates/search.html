@@ -12,25 +12,7 @@
         </div>
     </div>
 
-    <form class="search" action="search.php" method="post">
-        <input type="text" name="search" placeholder="Search..">
-    </form>
-
-    </br>
-    <hr class="solid">
-    </br>
-
-    <span class="caption">Our Menu</span>
-
-    </br>
-    </br>
-    </br>
-    <hr class="solid">
-
-    
-    {% for food in getfood %}
-        
-
+    {% for food in getsearch %}
         <div class="container">
             <div class="div_text">
                 <h2 style="text-align:left;">{{ food.Title }}
@@ -43,8 +25,7 @@
             </div>
         </div>
     {% endfor %}
-
-    </br>
+    
     </br>
     <hr class="solid">
     </br>
