@@ -2,9 +2,12 @@
     require_once __DIR__.'/bootstrap.php';
     require_once __DIR__.'/database.php';
     
+    // starting the session
+    session_start();
+
     // Create Database object
     $db = new Db();
-
+    
     //Getting product chosen info
     $itemId = $_SERVER['REQUEST_URI'];
     // ^value: /restaurant/details.php?a=1
