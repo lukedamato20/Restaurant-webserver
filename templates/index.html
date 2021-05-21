@@ -1,18 +1,18 @@
+
 {% extends "layout.html" %}
 
 {% block content %}
-  
-  <h1> <b>Restaurant Name</b></h1>
 
-  <div class = "MenuMain">
-    <ul type = "none">
-        <li><a href = "index.php" > Home </a></li>
-        <li><a href = "contact.php" > Bookings </a></li>
-        <li><a href = "menu.php" > Menu </a></li>
-        <li><a href = "" > Menu Info </a></li>
-        <li><a href = "favs.php" > Favourites </a></li>
-    </ul>
-  </div>
+    <div class="nav-bar-home" >
+        <a class="logo" href="index.php">Restaurant</a>
+
+        <div class="nav-bar-home-right">
+            <a href="booking.php">Booking</a>
+            <a href="menu.php">Menu</a>
+            <a href="favs.php">Favourites</a>
+            <a href="about.html">About</a>
+        </div>
+    </div>
 
 
 {% endblock %}

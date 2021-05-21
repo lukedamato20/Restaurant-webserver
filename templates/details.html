@@ -29,7 +29,7 @@
 
                 <h2>€{{ food.Price }}</h2>
 
-                <form action="includes/sql/add_fav.php" method="POST">
+                <form action="includes/php/add_fav.php" method="POST">
                     <input type="hidden" name="foodID" value="{{ food.ID }}" />
                                         
                     <button class="fav-button" type="submit" name="add_fav">Add to Favorites</button>

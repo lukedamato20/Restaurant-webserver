@@ -11,15 +11,9 @@
             <a href="about.html">About</a>
         </div>
     </div>
-    
-    <div class="favs-bg">
-        <div class="div_title">
-          <span class="border">Favourites</span>
-        </div>
-      </div>
-
+    <hr class="solid">
     {% for food in getfood %}
-        <div class="div-container">
+        <div class="fav-container">
             <div class="fav_div_text">
                 <h2 style="text-align:left;">{{ food.Title }}
                     <span style="float:right;">
@@ -30,23 +24,29 @@
                 </h2>
             </div>
             <div class="fav_details_text">
-                <p style="text-align:left;">{{ food.itemIngr }}
-                    <span style="float:right;">
+                <p style="text-align:left;">{{ food.itemIngr }}</p>
 
-                        <form action= "includes/sql/remove_fav.php" method="POST">
-                            <input type="hidden" name="foodID" value="{{ food.ID }}" />
-                                        
-                            <button class="remove-button" type="submit" name="remove_fav">Remove Item </button>
-                            <br>                        
-                        </form> 
-                    </span>
-                </p>
+                <form action= "includes/php/remove_fav.php" method="POST">
+                    <input type="hidden" name="foodID" value="{{ food.id }}" />
+                                
+                    <button class="remove-button" type="submit" name="remove_fav">Remove Item</button>
+                    <!-- <input type="button" value="Remove Item"/> -->
+                    <br>                        
+                </form> 
             </div>
         </div>
     {% endfor %}
+    <hr class="solid">
 
     </br>
-    </br>
+    <!-- Remove all button -->
+    <form class="fav_form" action= "includes/php/remove_all.php" method="POST">
+        <form action="" method="POST">
+            <input type="submit" value="Remove All"/>
+        </form>
+        <br>                        
+    </form>
+
     <hr class="solid">
 
     <div class="contact-text">
@@ -56,10 +56,13 @@
     
     </br>
 
-    <div class="fav_form">
+    <!-- Share list form -->
+    <div class="fav_form" action= "includes/php/send_mail.php" method="POST">
         <form action="" method="POST">
             <input type="text" name="email" placeholder="Email" required /> </br>
             <input type="text" name="message" placeholder="Message" required /> </br>
+            <input type="hidden" name="foodID" value="{{ food.ID }}" />
+
             <input type="submit" value="Share"/>
         </form>
     </div>
