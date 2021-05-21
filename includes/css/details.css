@@ -34,7 +34,7 @@ h3{
 
 /* fav button */
 .fav-button {
-    background-color: #f0d800;
+    background-color: #00a1a1;
     border: none;
     color: rgb(0, 0, 0);
     padding: 16px 32px;
@@ -50,7 +50,7 @@ h3{
 
 /* more info button */
 .back-button {
-    background-color: #f0d800;
+    background-color: #00a1a1;
     border: none;
     color: rgb(0, 0, 0);
     padding: 16px 32px;

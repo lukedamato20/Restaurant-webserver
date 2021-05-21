@@ -1,76 +1,121 @@
-.div-container {
-    border-radius: 15px;
-    background-color: #cacaca;
+.fav-container {
+  border-radius: 15px;
+  background-color: #cacaca;
 
-    margin-top: 30px;
-    margin-left: 450px;
-    margin-right: 450px;
-    
-    padding-top: 1px;
-    padding-right: 40px;
-    padding-left: 40px; 
-    padding-bottom: 22px;
+  margin-top: 30px;
+  margin-left: 450px;
+  margin-right: 450px;
+
+  padding-top: 1px;
+  padding-right: 40px;
+  padding-left: 40px; 
+  padding-bottom: 22px;
 }
 
 /* food items container*/
 .fav_div_text { 
-    font-size: 20px;
+  font-size: 20px;
 }
 .fav_details_text { 
-    font-size: 15px;
+  font-size: 15px;
 }
 .fav_form{
-    margin-left: 450px;
-    margin-right: 450px;
+  margin-left: 450px;
+  margin-right: 450px;
 }
 
 .contact-text{
-    margin-left: 450px;
-    margin-right: 450px;
+  margin-left: 450px;
+  margin-right: 450px;
+}
+
+/* title for catagories */
+.fav_title {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  text-align: center;
+  color: rgb(66, 66, 66);
+}
+
+/* span title */
+.fav_title span.border {
+  background-color: rgb(48, 48, 48);
+  opacity: 0.9;
+  color: #fff;
+  padding: 18px;
+  font-size: 36px;
+  letter-spacing: 10px;
 }
 
 .remove-button{
-    background-color: #f0d800;
-    border: none;
-    color: rgb(0, 0, 0);
-    padding: 16px 32px;
-    text-align: center;
-    font-size: 20px;
-    margin: 4px 2px;
-    transition: 0.3s;
-    font-weight: normal;
-    text-decoration: none;
-    cursor: pointer;
+  background-color: #00a1a1;
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 20px;
+  margin: 4px 2px;
+  transition: 0.3s;
+  font-weight: normal;
+  text-decoration: none;
+  cursor: pointer;
 }
 .remove-button:hover {
-    font-weight: bold;
+  font-weight: bold;
 }
 
+input[type=button] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  font-size: 16px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box
+}
 
-input[type=text], select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    font-size: 16px;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box
+input[type=button] {
+  width: 100%;
+  background-color: #bebebe;
+  color: black;
+  padding: 14px 20px;
+  font-size: 18px;
+  margin: 8px 0;
+  cursor: pointer;
+}
+
+input[type=button]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  font-size: 16px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box
+}
+
+input[type=button]:hover {
+  background-color: #505050;
+  font-weight: bold;
 }
 
 input[type=submit] {
-    width: 100%;
-    background-color: #f0d800;
-    color: black;
-    padding: 14px 20px;
-    font-size: 18px;
-    margin: 8px 0;
-    cursor: pointer;
+  width: 100%;
+  background-color: #00a1a1;
+  color: black;
+  padding: 14px 20px;
+  font-size: 18px;
+  margin: 8px 0;
+  cursor: pointer;
 }
 
 input[type=submit]:hover {
-    background-color: #d8c200;
-    font-weight: bold;
+  background-color: #009292;
+  font-weight: bold;
 }
 
 /* Nav bar responsivness */
@@ -84,22 +129,34 @@ input[type=submit]:hover {
     float: none;
   }
 }
+/* Nav bar responsivness */
+@media screen and (max-width: 600px) {
+  .nav-bar a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .nav-bar-right {
+    float: none;
+  }
+}
 /* Menu item text responsivness */
-@media screen and (max-width: 1450px){
-  .container {
+@media screen and (max-width: 1570px){
+  .fav-container, .fav_form {
     margin-left: 300px;
     margin-right: 300px;
   }
 }
 @media screen and (max-width: 1100px){
-  .container {
+  .fav-container, .fav_form {
     margin-left: 100px;
     margin-right: 100px;
+    padding-left: 20px;
   }
 }
 
 @media screen and (max-width: 700px){
-  .container, .div-text, .h2 {
+  .fav-container, .fav_div_text, .fav_details_text, .fav_form, .h2 {
     margin-left: 20px;
     margin-right: 20px;
     padding-left: 5px;
