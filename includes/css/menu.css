@@ -94,10 +94,28 @@
   font-size: 25px;
 }
 
+.caption {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  font-size: 35px;
+}
+
 /* food items text */
 h2 {
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+form.search input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  width: 100%;
+  background: #f1f1f1;
+  margin:auto;
+  text-align: center;
 }
 
 /* Solid border seperator*/

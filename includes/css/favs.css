@@ -24,31 +24,6 @@
   margin-right: 450px;
 }
 
-.contact-text{
-  margin-left: 450px;
-  margin-right: 450px;
-}
-
-/* title for catagories */
-.fav_title {
-  position: absolute;
-  left: 0;
-  top: 100%;
-  width: 100%;
-  text-align: center;
-  color: rgb(66, 66, 66);
-}
-
-/* span title */
-.fav_title span.border {
-  background-color: rgb(48, 48, 48);
-  opacity: 0.9;
-  color: #fff;
-  padding: 18px;
-  font-size: 36px;
-  letter-spacing: 10px;
-}
-
 .remove-button{
   background-color: #00a1a1;
   border: none;
@@ -66,38 +41,25 @@
   font-weight: bold;
 }
 
-input[type=button] {
+form.fav input[type=text] {
   width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  font-size: 16px;
-  display: inline-block;
+  padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  box-sizing: border-box
 }
 
 input[type=button] {
   width: 100%;
+  padding: 12px 20px;
   background-color: #bebebe;
-  color: black;
-  padding: 14px 20px;
+  margin: 8px 0;
   font-size: 18px;
-  margin: 8px 0;
-  cursor: pointer;
-}
-
-input[type=button]{
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  font-size: 16px;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
+  cursor: pointer;
   box-sizing: border-box
 }
-
 input[type=button]:hover {
   background-color: #505050;
   font-weight: bold;
@@ -112,7 +74,6 @@ input[type=submit] {
   margin: 8px 0;
   cursor: pointer;
 }
-
 input[type=submit]:hover {
   background-color: #009292;
   font-weight: bold;
