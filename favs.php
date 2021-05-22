@@ -17,15 +17,24 @@
         print_r($fav_food);
         print(" is empty");
 
+        echo "<br>";
+
+        print("email status: ");
+        print($_SESSION['sent']);
+
     } else {
         print_r($fav_food);
 
         print("list: ");
         print_r($fav_ids);
 
+        echo "<br>";
+        print("email status: ");
+        print($_SESSION['sent']);
+
         $fav_query = $db -> select("SELECT f.id AS id, f.image AS itemImage, f.title AS Title, f.description AS itemDesc, f.price AS Price, f.ingredients AS itemIngr 
         FROM food f WHERE id IN ('$fav_ids')"); 
     }
 
     // Render view on specified page
-    echo $twig->render('favs.html', ['getfood' => $fav_query]);
+    echo $twig->render('favs.html', ['favfood' => $fav_query]);

@@ -12,4 +12,4 @@
     $food = $db -> select("SELECT f.id, f.title AS Title, f.price AS Price, c.title AS categTitle FROM food f INNER JOIN category c ON  f.category = c.id");
 
     // Render view on specified page
-    echo $twig->render('menu.html', ['getfood' => $food]);
+    echo $twig->render('booking.html', ['getfood' => $food]);
