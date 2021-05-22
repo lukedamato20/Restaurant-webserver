@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="nav-bar">
+        <a href="index.php" class="logo">CompanyLogo</a>
+
+        <div class="nav-bar-right">
+            <a class="active" href="booking.php">Booking</a>
+            <a href="menu.php">Menu</a>
+            <a href="favs.php">Favourites</a>
+            <a href="about.php">About</a>
+        </div>
+    </div>
+
+    {% for food in getfood %}
+        
+    {% endfor %}
+
+    </br>
+    </br>
+    <hr class="solid">
+    </br>
+
+    <div class="footer">
+        <h2>Footer</h2>
+    </div>
+{% endblock %}

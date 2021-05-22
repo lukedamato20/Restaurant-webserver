@@ -8,11 +8,11 @@
             <a href="booking.php">Booking</a>
             <a href="menu.php">Menu</a>
             <a class="active" href="favs.php">Favourites</a>
-            <a href="about.html">About</a>
+            <a href="about.php">About</a>
         </div>
     </div>
     <hr class="solid">
-    {% for food in getfood %}
+    {% for food in favfood %}
         <div class="fav-container">
             <div class="fav_div_text">
                 <h2 style="text-align:left;">{{ food.Title }}
@@ -52,7 +52,7 @@
     <hr class="solid">
 
     <div class="contact-text">
-        <p style="font-size: 30px; font-weight: bold;" >Share your form with yourself or anyone: </p>
+        <p style="font-size: 30px; font-weight: bold;" >Share your list with anyone: </p>
         <p style="font-size: 20px;">Enter the recipient's email and an optional message...</p>
     </div>
     
@@ -62,7 +62,7 @@
     <div class="fav_form">
         <form class="fav" action="includes/php/send_mail.php" method="POST">
             <input type="text" name="email" placeholder="Email" required /> </br>
-            <input type="text" name="message" placeholder="Message" required /> </br>
+            <input type="text" name="message" placeholder="Message" /> </br>
             <input type="hidden" name="foodID" value="{{ food.ID }}" />
 
             <input type="submit" value="Share"/>
