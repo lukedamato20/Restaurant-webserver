@@ -16,14 +16,21 @@
 
 Main PHP Files: 
   - index.php (Front page)
-    - booking.php (page to contact/book a table)
-    - menu.php (menu page where all food items can be viewed)
-      - details.php (page to view details about a chosen food item)
-      - search.php (search page to view search results)
-    - favs.php (the favs page that shows all the food items chose)
-    - about.php (about page that shows all information, adderss, opening hours and contact information about our restaurant)
+  - booking.php (page to contact/book a table)
+  - menu.php (menu page where all food items can be viewed)
+    - details.php (page to view details about a chosen food item)
+    - search.php (search page to view search results)
+  - favs.php (the favs page that shows all the food items chose)
+  - about.php (about page that shows all information, adderss, opening hours and contact information about our restaurant)
 
 Database Files:
-  - database.php 
-  - bootstrap.php
-  - config.ini
+  - database.php (Database wrapper for MySQL)
+    - /**
+       * Database wrapper for a MySQL with PHP tutorial
+       * 
+       * @copyright Eran Galperin
+       * @license MIT License
+       * @see http://www.binpress.com/tutorial/using-php-with-mysql-the-right-way/17
+       */
+  - bootstrap.php (loading autoloader, specifying twig template location and instantiation of twig)
+  - config.ini (database info and authentication information for admin user)
