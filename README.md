@@ -25,9 +25,9 @@ Main PHP Files:
 
 Database Files:
   - database.php (Database wrapper for MySQL)
-    - Database wrapper for a MySQL with PHP tutorial
-      @copyright Eran Galperin
-      @license MIT License
+    - Database wrapper for a MySQL with PHP tutorial \n
+      @copyright Eran Galperin \n
+      @license MIT License \n
       @see http://www.binpress.com/tutorial/using-php-with-mysql-the-right-way/17
   - bootstrap.php (loading autoloader, specifying twig template location and instantiation of twig)
   - config.ini (database info and authentication information for admin user)
