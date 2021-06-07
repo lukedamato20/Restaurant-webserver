@@ -13,37 +13,24 @@
     </div>
 
     <form class="search" action="search.php" method="post">
-        <input type="text" name="search" placeholder="Search..">
+        <input type="text" name="search" placeholder="Search...">
     </form>
 
     </br>
     <hr class="solid">
     </br>
 
-    <span class="caption">Search Results</span>
+    <span class="caption">No Search Results Found</span>
+    </br>
+    </br>
+    </br>
+    <span class="caption-small">Try searching again, with better keywords...</span>
 
     </br>
     </br>
-    </br>
     <hr class="solid">
+    </br>
 
-    {% for food in getsearch %}
-        <div class="container">
-            <div class="div_text">
-                <h2 style="text-align:left;">{{ food.Title }}
-                    <span style="float:right;">
-                        <a href="details.php?a={{ food.id }}" class="info-button">
-                            <span>€ {{ food.Price }}</span>
-                        </a> 
-                    </span>
-                </h2>
-            </div>
-        </div>
-    {% endfor %}
-    
-    </br>
-    <hr class="solid">
-    </br>
 
     <div class="footer">
         <h2>Footer</h2>

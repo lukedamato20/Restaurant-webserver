@@ -65,8 +65,7 @@
 }
 /* info button on hover */
 .info-button:hover {
-  font-weight: bold;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  background-color: #008d8d;
 }
 
 /* text container for food catagories */
@@ -82,20 +81,22 @@
   padding-right: 40px;
   padding-left: 40px; 
   padding-bottom: 5px;
+  transition: all 0.3s;
 }
 /* text container on hover */
 .container:hover{
   background-color: #d1d1d1;
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 /* food items container*/
 .div_text { 
   color: rgb(80, 80, 80);
-  font-size: 25px;
 }
 
-.contact-text{
-  text-align: center;
+.div_text h2{ 
+  color: rgb(80, 80, 80);
+  font-size: 30px;
 }
 
 .caption {
@@ -105,7 +106,14 @@
   color: #000;
   font-size: 35px;
 }
-
+.caption-small{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: rgb(27, 27, 27);
+  font-style: italic;
+  font-size: 23px;
+}
 /* food items text */
 h2 {
   padding-top: 10px;
@@ -137,17 +145,7 @@ hr.solid {
   margin-top: 20px;
 }
 
-/* Nav bar responsivness */
-@media screen and (max-width: 600px) {
-  .nav-bar a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  .nav-bar-right {
-    float: none;
-  }
-}
+
 /* Menu item text responsivness */
 @media screen and (max-width: 1450px){
   .container {
@@ -172,5 +170,16 @@ hr.solid {
   /* change text on hover */
   .info-button:hover:before {
     content:"...";
+  }
+}
+/* Nav bar responsivness */
+@media screen and (max-width: 650px) {
+  .nav-bar a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .nav-bar-right {
+    float: none;
   }
 }

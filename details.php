@@ -20,4 +20,4 @@
     FROM food f WHERE id='$currentID'");
 
     // Render view on specified page
-    echo $twig->render('details.html', ['getfood' => $food] );
+    echo $twig->render('details.html', ['getdetails' => $food] );

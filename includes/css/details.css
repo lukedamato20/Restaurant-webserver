@@ -1,41 +1,66 @@
-* {
-    box-sizing: border-box;
+/* Container */
+.item-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    display:flex;
+    flex-direction: row;
+    transition: all 0.3s;
+}
+.item-container:hover {
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-/* image coloum */
-.product-image {
-    float: left;
-    width: 50%;
-    height: auto;
-    background-size: contain; 
-    padding-left: 150px;
-    padding-top: 60px;
+/* Columns */
+.text-grid {
+    flex: 50%;
 }
-/* text coloum */
+.image-grid {
+    flex: 50%;
+    position: relative;
+    margin-right: 20px;
+}
+.image-grid img {
+    width: 100%;
+    position: absolute;
+    max-width: 500px;
+}
+
+/* Product Description */
 .product-text {
-    float: left;
-    padding: 10px;
-    width: 50%;
-    padding-right: 200px;
-    padding-top: 30px;
+    border-bottom: 1px solid #E1E8EE;
+    margin-bottom: 20px;
 }
-/* Title Styling */
-h1{
-    font-size: 40px;
+.product-text h1 {
+    font-weight: 200;
+    font-size: 45px;
+    color: #43484D;
 }
-/* Price Styling */
-h2{
-    font-size: 30px;
+.product-text h2 {
+    font-weight: 200;
+    font-size: 25px;
+    font-style: oblique;
+    color: #43484D;
 }
-/* Description Styling */
-h3{
-    font-size: 20px
+.product-text p {
+    font-size: 20px;
 }
 
-/* fav button */
+/* Product Price */
+.price-grid {
+    display: flex;
+    align-items: center;
+}
+.price-grid span {
+    font-size: 26px;
+    font-weight: 300;
+    color: #43474D;
+    margin-right: 20px;
+}
+
+/* fav button */ 
 .fav-button {
     background-color: #00a1a1;
-    border: none;
     color: rgb(0, 0, 0);
     padding: 16px 32px;
     text-align: center;
@@ -43,9 +68,9 @@ h3{
     margin: 4px 2px;
     text-decoration: none;
 }
-/* info button on hover */
+/* fav button on hover*/ 
 .fav-button:hover {
-    font-weight: bold;
+    background-color: #008d8d;
 }
 
 /* more info button */
@@ -61,66 +86,23 @@ h3{
 }
 /* info button on hover */
 .back-button:hover {
-    font-weight: bold;
+    background-color: #008d8d;
 }
 
-  /* food items container*/
-.div_details_text { 
-    font-size: 20px;
-    padding-left: 500px;
-    padding-right: 500px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
+/* Responsive */
+@media screen and (max-width: 1000px) {
+    .image-grid, .text-grid {
+        flex: 100%;
+    }
 
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 1400px) {
-    .product-image {
-        width: 50%;
-        padding-left: 100px;
+}
+@media screen and (max-width: 800px) {
+    .item-container {
+        flex-direction: column;
+        flex-wrap: wrap;
+        display: block;
     }
-    .product-text {
-        width: 50%;
-        padding-left: 20px;
-        padding-right: 100px;
-
+    .text-grid {
+        position: absolute;
     }
 }
-@media screen and (max-width: 880px) {
-    .product-image {
-        width: 100%;
-        padding-left: 100px;
-    }
-    .product-text {
-        width: 100%;
-        padding-left: 100px;
-    }
-}
-@media screen and (max-width: 600px) {
-    .product-image {
-        width: 100%;
-    }
-    .product-text {
-        width: 100%;
-    }
-}
-@media screen and (max-width: 500px) {
-    .product-image {
-        width: 100%;
-        float:none;
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-    .product-text {
-        width: 100%;
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-}
-
-.responsive-pic {
-    width: 100%;
-    max-width: 700px;
-    height: auto;
-  }

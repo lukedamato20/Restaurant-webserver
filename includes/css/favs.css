@@ -1,6 +1,6 @@
 .fav-container {
   border-radius: 15px;
-  background-color: #cacaca;
+  background-color: #f1f1f1;
 
   margin-top: 30px;
   margin-left: 450px;
@@ -10,6 +10,10 @@
   padding-right: 40px;
   padding-left: 40px; 
   padding-bottom: 22px;
+}
+.fav-container:hover {
+  background-color: #dfdfdf;
+
 }
 
 /* food items container*/
@@ -39,6 +43,10 @@
 }
 .remove-button:hover {
   font-weight: bold;
+}
+
+.contact-text{
+  text-align: center;
 }
 
 form.fav input[type=text] {

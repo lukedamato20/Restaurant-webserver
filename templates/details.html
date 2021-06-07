@@ -12,37 +12,72 @@
         </div>
     </div>
 
-    {% for food in getfood %}
-        <div class="row">
-            <div class="product-image">
-                <img src="{{ food.itemImage }}" alt="{{ food.Title }}" style="width:70%">
-            </div>
-            
-            <div class="product-text">
+    <form class="search" action="search.php" method="post">
+        <input type="text" name="search" placeholder="Search..">
+    </form>
 
-                <h1>{{ food.Title }}</h1>
-                
-                <h3>Description</h3>
-                <p>{{ food.itemDesc }}</p>
-                <h3>Ingredients</h3> 
-                <p>{{ food.itemIngr }}</p>   
+    <hr class="solid">
+    </br>
 
-                <h2>€{{ food.Price }}</h2>
+    <span class="caption">Details</span>
 
-                <form action="includes/php/add_fav.php" method="POST">
-                    <input type="hidden" name="foodID" value="{{ food.ID }}" />
-                                        
-                    <button class="fav-button" type="submit" name="add_fav">Add to Favorites</button>
-                    <br>
-                </form>
+    </br>
+    </br>
+    </br>
+    <hr class="solid">
 
-                <br>
-                <a href="menu.php" class="back-button">Back</a>
+    </br>
+    </br>
+
+    {% for food in getdetails %}
+        <div class="item-container">
+
+            <!-- Image -->
+            <div class="image-grid">
+                <img src="{{ food.itemImage }}" alt="">
             </div>
 
-            <p></p>
+            <div class="text-grid">
+                <div class="product-text">
+                    <h1>{{ food.Title }}</h1> 
+                    
+                    <h2>Description</h2>
+                    <p>{{ food.itemDesc }}</p>
+
+                    <h2>Ingredients</h2>
+                    <p>{{ food.itemIngr }}</p> 
+                </div>
+
+                </br>
+                <div class = "price-grid">
+                    <span>€{{ food.Price }}</span>
+    
+                    <form action="includes/php/add_fav.php" method="POST">
+                        <input type="hidden" name="foodID" value="{{ food.ID }}" />
+                        <input type="hidden" name="foodTitle" value="{{ food.Title }}" />
+                        <input type="hidden" name="foodPrice" value="{{ food.Price }}" />
+        
+                        <button class="fav-button" type="submit" name="add_fav">Add to Favorites</button>
+                        <br>
+                    </form>
+                    <a href="menu.php" class="back-button">Back</a>                   
+                </div>
+            </div>
+
+
+
+            </br>
+            </br>
         </div>
 
-
     {% endfor %}
+
+    </br>
+    </br>
+    <hr class="solid">
+    </br>
+
+    <div class="footer">
+        <h2>Footer</h2>
+    </div>
 {% endblock %}

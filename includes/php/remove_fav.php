@@ -29,5 +29,5 @@
     $_SESSION["fav_ids"] = $fav_ids;
     $_SESSION["Fav_Food"]= $fav_food;
     
-    // redirecting to details page
+    // redirecting to favs page
     header("location: ../../favs.php?removed=success");

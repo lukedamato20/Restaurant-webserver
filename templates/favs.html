@@ -11,7 +11,18 @@
             <a href="about.php">About</a>
         </div>
     </div>
+    
+    </br>
     <hr class="solid">
+    </br>
+
+    <span class="caption">Your Favourites</span>
+
+    </br>
+    </br>
+    </br>
+    <hr class="solid">
+
     {% for food in favfood %}
         <div class="fav-container">
             <div class="fav_div_text">
@@ -27,10 +38,8 @@
                 <p style="text-align:left;">{{ food.itemIngr }}</p>
 
                 <form action= "includes/php/remove_fav.php" method="POST">
-                    <input type="hidden" name="foodID" value="{{ food.id }}" />
-                                
+                    <input type="hidden" name="foodID" value="{{ food.id }}" /> 
                     <button class="remove-button" type="submit" name="remove_fav">Remove Item</button>
-                    <!-- <input type="button" value="Remove Item"/> -->
                     <br>                        
                 </form> 
             </div>
@@ -51,6 +60,7 @@
 
     <hr class="solid">
 
+    <!-- Share favs list Text -->
     <div class="contact-text">
         <p style="font-size: 30px; font-weight: bold;" >Share your list with anyone: </p>
         <p style="font-size: 20px;">Enter the recipient's email and an optional message...</p>
@@ -60,9 +70,8 @@
 
     <!-- Share list form -->
     <div class="fav_form">
-        <form class="fav" action="includes/php/send_mail.php" method="POST">
+        <form class="fav" action="mail_info.php" method="POST">
             <input type="text" name="email" placeholder="Email" required /> </br>
-            <input type="text" name="message" placeholder="Message" /> </br>
             <input type="hidden" name="foodID" value="{{ food.ID }}" />
 
             <input type="submit" value="Share"/>
