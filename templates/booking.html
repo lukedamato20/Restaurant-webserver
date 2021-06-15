@@ -12,9 +12,16 @@
         </div>
     </div>
 
-    {% for food in getfood %}
-        
-    {% endfor %}
+    <div class="booking_form">
+        <form class="book" action ="mail_booking.php" method = "post">
+            <input type="text" name ="name" placeholder="Enter your full name">
+            <input type="text" name ="email" placeholder="Enter your email..." required>
+    
+            <textarea name="message" placeholder="Any Special Requests?"></textarea>
+    
+            <button type="submit" value="Reservation">Make Reservation</button>
+        </form>
+    </div>
 
     </br>
     </br>

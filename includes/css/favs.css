@@ -56,7 +56,7 @@ form.fav input[type=text] {
   border-radius: 4px;
 }
 
-input[type=button] {
+form.fav input[type=button] {
   width: 100%;
   padding: 12px 20px;
   background-color: #bebebe;
@@ -68,12 +68,12 @@ input[type=button] {
   cursor: pointer;
   box-sizing: border-box
 }
-input[type=button]:hover {
+form.fav input[type=button]:hover {
   background-color: #505050;
   font-weight: bold;
 }
 
-input[type=submit] {
+form.fav input[type=submit] {
   width: 100%;
   background-color: #00a1a1;
   color: black;
@@ -82,7 +82,7 @@ input[type=submit] {
   margin: 8px 0;
   cursor: pointer;
 }
-input[type=submit]:hover {
+form.fav input[type=submit]:hover {
   background-color: #009292;
   font-weight: bold;
 }

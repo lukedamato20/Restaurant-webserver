@@ -1,0 +1,42 @@
+.booking_form{
+    margin-left: 450px;
+    margin-right: 450px;
+}
+
+form.book input[type=text] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form.book input[type=button] {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #bebebe;
+    margin: 8px 0;
+    font-size: 18px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    box-sizing: border-box
+}
+form.book input[type=button]:hover {
+    background-color: #505050;
+    font-weight: bold;
+}
+
+form.book input[type=submit] {
+    width: 100%;
+    background-color: #00a1a1;
+    color: black;
+    padding: 14px 20px;
+    font-size: 18px;
+    margin: 8px 0;
+    cursor: pointer;
+}
+form.book input[type=submit]:hover {
+    background-color: #009292;
+    font-weight: bold;
+}
