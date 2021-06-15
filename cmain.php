@@ -14,8 +14,8 @@
         <input type="text" name ="mail" placeholder="Mail">
         <textarea name="message" placeholder = "Message"></textarea>
         <button type = "submit" name = "submit">Send Email</button>
-      </form>
-    </main>
+     </form>
+     </main>
   </body>
 </html>
 
