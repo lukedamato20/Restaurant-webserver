@@ -1,0 +1,125 @@
+.contact-form{
+  margin-left: 450px;
+  margin-right: 450px;
+}
+
+form.contact-form input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  background-color: #bebebe;
+  margin: 8px 0;
+  font-size: 18px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  box-sizing: border-box
+}
+form.contact-form input[type=time] {
+  width: 100%;
+  padding: 12px 20px;
+  background-color: #bebebe;
+  margin: 8px 0;
+  font-size: 18px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  box-sizing: border-box
+}
+form.contact-form label{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  font-size: 18px;
+  display: inline-block;
+  border-radius: 4px;
+  box-sizing: border-box
+}
+form.contact-form textarea {
+  width: 100%;
+  padding: 12px 20px;
+  background-color: #bebebe;
+  margin: 8px 0;
+  font-size: 18px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  box-sizing: border-box
+}
+
+#numofpeople {
+  width: 100%;
+  padding: 12px 20px;
+  background-color: #bebebe;
+  margin: 8px 0;
+  font-size: 18px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  box-sizing: border-box
+}
+#date {
+  width: 100%;
+  padding: 12px 20px;
+  background-color: #bebebe;
+  margin: 8px 0;
+  font-size: 18px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  box-sizing: border-box
+}
+#time {
+  width: 100%;
+  padding: 12px 20px;
+  background-color: #bebebe;
+  margin: 8px 0;
+  font-size: 18px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  box-sizing: border-box
+}
+#submit {
+  font-size: 22px;
+  text-align: center;
+  letter-spacing: 1.5px;
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+  width: 100%;
+  background-color: #00a1a1;
+  color: white;
+  cursor: pointer;
+}
+#submit:hover {
+  background-color: #009292;
+  font-weight: bold;
+}
+
+/* Menu item text responsivness */
+@media screen and (max-width: 1570px){
+  .contact-form {
+    margin-left: 300px;
+    margin-right: 300px;
+  }
+}
+@media screen and (max-width: 1100px){
+  .contact-form {
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-left: 20px;
+  }
+}
+@media screen and (max-width: 700px){
+  .contact-form {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 5px;
+  } 
+}
