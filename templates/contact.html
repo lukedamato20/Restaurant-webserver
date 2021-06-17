@@ -23,16 +23,16 @@
 
     <form class="contact-form" action ="mail_contact.php" method = "POST">
         <label for="people">Enter full name:</label>
-        <input type="text" name ="name">
+        <input type="text" name ="name" required>
         
         <label for="people">Enter the subject:</label>
         <input type="text" name ="subject">
 
         <label for="people">Enter your email:</label>
-        <input type="text" name ="email" >
+        <input type="text" name ="email" required>
 
         <label for="people">Enter your message:</label>
-        <textarea name="message" white-space="pre" rows="10"></textarea>
+        <textarea name="message" white-space="pre" rows="10" required></textarea>
 
         <input type="submit" name="submit" value="Submit" id="submit"/>
     </form>

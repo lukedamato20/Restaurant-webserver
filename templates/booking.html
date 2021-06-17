@@ -23,19 +23,19 @@
 
     <form class="contact-form" action="mail_booking.php" method="POST">
         <label >Enter full name:</label>
-        <input type="text" name ="name">
+        <input type="text" name ="name" required>
 
         <label for="numofpeople">Number of People:</label>
-        <input type="number" name="people" id="numofpeople" min="1" max="9" /> 
+        <input type="number" name="people" id="numofpeople" min="1" max="9" required> 
 
         <label for="date">Choose date:</label>
-        <input type="date" name="date" id="date" value="2021-01-01">
+        <input type="date" name="date" id="date" value="2021-01-01" required>
         
         <label for="time">Select time to book table:</label>
-        <input type="time" name="time" id="time">
+        <input type="time" name="time" id="time" required>
         
         <label>Enter your email:</label>
-        <input type="text" name ="email">
+        <input type="text" name ="email" required>
         </br>
 
         <input type="submit" name="submit" value="Submit"  id="submit" />

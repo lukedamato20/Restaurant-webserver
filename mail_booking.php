@@ -5,33 +5,40 @@
     $time = $_POST['time'];
     $email = $_POST['email'];
 
-    $subject = 'My Reservation - Our Restaurant';
+    // email validation
+    if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+        // error sending email, hence redirect
+        echo $twig->render('emailerror.html');
 
-    $headers = "From: ". $email;
-    $headers .= "Reply-To: ". $email . "\r\n";
-    $headers .= "Content-Type: text/html; charset=utf-8\r\n";
+    } else {
 
-    $mailTo = "lldamato14@gmail.com";
+        $subject = 'My Reservation - Our Restaurant';
 
-    $message = "You have recieved an e-mail from " . $name;
-    $message .= ("<br>");
-    $message .= "Number of people in the group: " . $people;
-    $message .= ("<br>");
-    $message .= "Date of reservation: " . $date;
-    $message .= ("<br>");
-    $message .= "Time of reservation: " . $time;
-    $message .= ("<br>");
+        $headers = "From: ". $email;
+        $headers .= "Reply-To: ". $email . "\r\n";
+        $headers .= "Content-Type: text/html; charset=utf-8\r\n";
 
-    if(mail($mailTo, $subject, $message, $headers)){
-        // $_SESSION['sent'] = "email sent";
-        // redirecting to favs page
-        header("location: booking.php?mailsent");  
-    } else{
-        //$_SESSION['sent'] = "error sending email";
-        // redirecting to favs page
-        header("location: booking.php?mailnotsent");  
+        $mailTo = "lldamato14@gmail.com";
+
+        $message = "You have recieved an e-mail from " . $name;
+        $message .= ("<br>");
+        $message .= "Number of people in the group: " . $people;
+        $message .= ("<br>");
+        $message .= "Date of reservation: " . $date;
+        $message .= ("<br>");
+        $message .= "Time of reservation: " . $time;
+        $message .= ("<br>");
+
+        if(mail($mailTo, $subject, $message, $headers)){
+            // $_SESSION['sent'] = "email sent";
+            // redirecting to favs page
+            header("location: booking.php?mailsent");  
+        } else{
+            //$_SESSION['sent'] = "error sending email";
+            // redirecting to favs page
+            echo $twig->render('emailerror.html');  
+        }
     }
-
 
  
 
