@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="nav-bar">
+        <a href="index.php" class="logo">Restaurant</a>
+
+        <div class="nav-bar-right">
+            <a href="booking.php">Booking</a>
+            <a href="menu.php">Menu</a>
+            <a href="favs.php">Favourites</a>
+            <a href="about.php">About</a>
+            <a class="active" href="contact.php">Contact Us</a>
+        </div>
+    </div>
+
+    </br>
+    <hr class="solid">
+    </br>
+    <span class="caption">Contact Us</span>
+    </br> </br> </br>
+    <hr class="solid">
+    </br>
+
+    <form class="contact-form" action ="mail_contact.php" method = "POST">
+        <label for="people">Enter full name:</label>
+        <input type="text" name ="name">
+        
+        <label for="people">Enter the subject:</label>
+        <input type="text" name ="subject">
+
+        <label for="people">Enter your email:</label>
+        <input type="text" name ="email" >
+
+        <label for="people">Enter your message:</label>
+        <textarea name="message" white-space="pre" rows="10"></textarea>
+
+        <input type="submit" name="submit" value="Submit" id="submit"/>
+    </form>
+
+    </br> </br>
+    <hr class="solid">
+    </br>
+    
+    <div class="footer">
+        <h2>Opening hours: Monday to Sunday 12pm - 12am</h2>
+        <h3>Address: 20 Willock Road Sliema</h3>
+        <h4>Telephone: 21492312</h4>
+    </div>
+{% endblock %}

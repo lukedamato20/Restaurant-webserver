@@ -2,17 +2,71 @@
 {% extends "layout.html" %}
 
 {% block content %}
-
-    <div class="nav-bar-home" >
-        <a class="logo" href="index.php">Restaurant</a>
-
-        <div class="nav-bar-home-right">
+    <div class="nav-bar">
+        <a href="index.php" class="logo">Restaurant</a>
+    
+        <div class="nav-bar-right">
             <a href="booking.php">Booking</a>
             <a href="menu.php">Menu</a>
             <a href="favs.php">Favourites</a>
             <a href="about.php">About</a>
+            <a href="contact.php">Contact Us</a>
         </div>
     </div>
 
+    </br>
+    <hr class="solid">
+    </br>
+
+    <!-- Title -->
+    <span class="caption">Reserve a table</span>
+
+    </br> </br> </br>
+
+    <span class="caption">
+        <div class="front-button" style="float: center;">
+            <button onclick="window.location.href='booking.php';">Reservation</button>
+        </div>
+    </span>
+
+    <br> <br> <br> <br> <br>
+    <hr class="solid">
+    </br>
+
+    <!-- Title -->
+    <span class="caption">View our Menu</span>
+    
+    </br> </br> </br>
+
+    <span class="caption">
+        <div class="front-button" style="float: center;">
+            <button onclick="window.location.href='menu.php';">Menu</button>
+        </div>
+    </span>
+
+    </br> </br> </br> </br>
+    <hr class="solid">
+    </br>
+
+    <!-- Title -->
+    <span class="caption">Get more info...</span>
+
+    </br> </br> </br>
+
+    <span class="caption">
+        <div class="front-button" style="float: center;">
+            <button onclick="window.location.href='about.php';">About Us</button>
+        </div>
+    </span>
+
+    </br> </br> </br> </br> 
+    <hr class="solid">
+    </br>
+
+    <div class="footer">
+        <h2>Opening hours: Monday to Sunday 12pm - 12am</h2>
+        <h3>Address: 20 Willock Road Sliema</h3>
+        <h4>Telephone: 21492312</h4>
+    </div>
 
 {% endblock %}

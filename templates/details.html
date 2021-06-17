@@ -2,13 +2,14 @@
 
 {% block content %}
     <div class="nav-bar">
-        <a href="index.php" class="logo">CompanyLogo</a>
-        
+        <a href="index.php" class="logo">Restaurant</a>
+
         <div class="nav-bar-right">
             <a href="booking.php">Booking</a>
-            <a href="menu.php">Menu</a>
+            <a class="active" href="menu.php">Menu</a>
             <a href="favs.php">Favourites</a>
             <a href="about.php">About</a>
+            <a href="contact.php">Contact Us</a>
         </div>
     </div>
 
@@ -46,38 +47,34 @@
 
                     <h2>Ingredients</h2>
                     <p>{{ food.itemIngr }}</p> 
+                    <p></p>
                 </div>
 
                 </br>
                 <div class = "price-grid">
                     <span>€{{ food.Price }}</span>
-    
-                    <form action="includes/php/add_fav.php" method="POST">
-                        <input type="hidden" name="foodID" value="{{ food.ID }}" />
-                        <input type="hidden" name="foodTitle" value="{{ food.Title }}" />
-                        <input type="hidden" name="foodPrice" value="{{ food.Price }}" />
-        
-                        <button class="fav-button" type="submit" name="add_fav">Add to Favorites</button>
-                        <br>
-                    </form>
-                    <a href="menu.php" class="back-button">Back</a>                   
+                   
                 </div>
+
+                <br> <br>
+
+                <form action="includes/php/add_fav.php" method="POST">
+                    <input type="hidden" name="foodID" value="{{ food.ID }}" />
+                    <input type="hidden" name="foodTitle" value="{{ food.Title }}" />
+                    <input type="hidden" name="foodPrice" value="{{ food.Price }}" />
+    
+                    <button class="fav-button" type="submit" name="add_fav">Add to Favorites</button>
+                </form>
+                
+                <button class="back-button" onclick="window.location.href='menu.php';">Back</button>
             </div>
-
-
-
-            </br>
-            </br>
         </div>
 
     {% endfor %}
 
-    </br>
-    </br>
-    <hr class="solid">
-    </br>
-
     <div class="footer">
-        <h2>Footer</h2>
+        <h2>Opening hours: Monday to Sunday 12pm - 12am</h2>
+        <h3>Address: 20 Willock Road Sliema</h3>
+        <h4>Telephone: 21492312</h4>
     </div>
 {% endblock %}

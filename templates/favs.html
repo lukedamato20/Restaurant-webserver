@@ -2,13 +2,14 @@
 
 {% block content %}
     <div class="nav-bar">
-        <a href="index.php" class="logo">CompanyLogo</a>
+        <a href="index.php" class="logo">Restaurant</a>
 
         <div class="nav-bar-right">
             <a href="booking.php">Booking</a>
             <a href="menu.php">Menu</a>
             <a class="active" href="favs.php">Favourites</a>
             <a href="about.php">About</a>
+            <a href="contact.php">Contact Us</a>
         </div>
     </div>
     
@@ -47,41 +48,43 @@
     {% endfor %}
 
     </br>
-    <hr class="solid">
     </br>
     
     <!-- Remove all button -->
-    <form class="fav_form" action= "includes/php/remove_all.php" method="POST">
-        <input type="submit" value="Remove All"/>
-        <br>                        
+    <form class="contact-form" action= "includes/php/remove_all.php" method="POST">
+        <input type="submit" name="submit" id="submit" value="Remove All"/>
+                                
     </form>
 
+    <br>
     <hr class="solid">
 
     <!-- Share favs list Text -->
     <div class="contact-text">
-        <p style="font-size: 30px; font-weight: bold;" >Share your list with anyone: </p>
-        <p style="font-size: 20px;">Enter the recipient's email and an optional message...</p>
+        <p style="font-size: 30px; font-weight: bold; text-align: center;" >Share your list with anyone: </p>
+        <p style="font-size: 20px; text-align: center;">Enter the recipient's email and an optional message...</p>
     </div>
     
     </br>
 
     <!-- Share list form -->
-    <div class="fav_form">
-        <form class="fav" action="mail_fav.php" method="POST">
-            <input type="text" name="email" placeholder="Email" required /> </br>
-            <input type="hidden" name="foodID" value="{{ food.ID }}" />
+    <form class="contact-form" action="mail_fav.php" method="POST">
+        <input type="text" name="email" placeholder="Email" required /> </br>
+        <input type="hidden" name="foodID" value="{{ food.ID }}" />
 
-            <input type="submit" value="Share"/>
-        </form>
-    </div>
+        <input type="submit" name="submit" value="Share" id="submit"/>
+    </form>
 
     </br>
     <hr class="solid">
     </br>
     </br>
+    </br>
+    </br>
 
     <div class="footer">
-        <h2>Footer</h2>
+        <h2>Opening hours: Monday to Sunday 12pm - 12am</h2>
+        <h3>Address: 20 Willock Road Sliema</h3>
+        <h4>Telephone: 21492312</h4>
     </div>
 {% endblock %}

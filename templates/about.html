@@ -2,26 +2,39 @@
 
 {% block content %}
     <div class="nav-bar">
-        <a href="index.php" class="logo">CompanyLogo</a>
+        <a href="index.php" class="logo">Restaurant</a>
 
         <div class="nav-bar-right">
             <a href="booking.php">Booking</a>
             <a href="menu.php">Menu</a>
             <a href="favs.php">Favourites</a>
             <a class="active" href="about.php">About</a>
+            <a href="contact.php">Contact Us</a>
         </div>
     </div>
 
-    {% for food in getfood %}
-        
-    {% endfor %}
+    <div class="about">
+        <div class="inner-section">
+            <h1>About Us</h1>
+            <p class="text">
+            Run by family for over 50 years , at Restuarant, we wish to offer our personal rendition of Maltesecuisine with an innovative  take on traditional cooking methods, 
+            fine Maltese produce and the legacy of our shared food heritage, whilst including italian cuisine in our menu.
+            </p>
 
-    </br>
-    </br>
-    <hr class="solid">
-    </br>
+            <p class="text">
+            Moreover, we regard it as a personal challenge to help bring about a revival of Maltese cuisine 
+            and let its distinctive flavours and particular regional character brighten up the world.
+            </p>
+                    
+            <div class="contactus" style="text-align:center;">
+                <button onclick="window.location.href='contact.php';">Contact Us</button>
+            </div>
+        </div>
+    </div>
 
     <div class="footer">
-        <h2>Footer</h2>
+        <h2>Opening hours: Monday to Sunday 12pm - 12am</h2>
+        <h3>Address: 20 Willock Road Sliema</h3>
+        <h4>Telephone: 21492312</h4>
     </div>
 {% endblock %}
