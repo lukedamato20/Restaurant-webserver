@@ -21,7 +21,12 @@ Main PHP Files:
     - details.php (page to view details about a chosen food item)
     - search.php (search page to view search results)
   - favs.php (the favs page that shows all the food items chose)
+  - contact.php (contact page shows the user a contact form in which the user can input his/her details in order to send us a query or complaint)
   - about.php (about page that shows all information, adderss, opening hours and contact information about our restaurant)
+  - email PHP Files (the php files for sending an email from every specific form)
+    - mail_booking.php
+    - mail_contact.php
+    - mail_fav.php 
 
 Database Files:
   - database.php (Database wrapper for MySQL)
