@@ -1,48 +1,5 @@
-<!DOCTYPE html>
-<html>
- <head>
-  <title>Booking</title>
-  <link rel="stylesheet" href="styles3.css">
-  </head>
-  <body>
+<?php
+    require_once __DIR__.'/bootstrap.php';
 
-  <div class="nav-bar">
-    <a href="index.php" class="logo">CompanyLogo</a>
-
-    <div class="nav-bar-right">
-        <a class="" href="booking.php">Booking</a>
-        <a href="menu.php">Menu</a>
-        <a href="favs.php">Favourites</a>
-        <a href="aboutus.html">About</a>
-        <a href="cmain.php">Contact Us</a>
-    </div>
-</div>
-
-
-    <main>
-
-    <h1>Book a table</h1>
-
-    <form class="contact-form" action ="cform.php" method = "post">
-        <input type="text" name ="name" placeholder="Name">
-        <label for="noofpeople">Number of People:</label>
-        <input type="number" id="noofpeople" min="1" max="9" /> 
-        <label for="day">Choose date:</label>
-        <input type="date" id="day" name="Choose Day" value="2021-01-01">
-        <label for="time">Select a time:</label>
-        <input type="time"  id="time" name="appt" placeholder="Select time to book table">
-        <input type="text" name ="mail" placeholder="Email">
-        <input type="submit" name="submit" value="Submit"  id="submit" />
-      </form>
-    </main>
-    
-    <div class="footer">
-    <h2>Opening hours: Monday to Sunday 12pm - 12am</h2>
-    <h3>Address: 20 Willock Road Sliema</h3>
-    <h4>Telephone: 21492312</h4>
-</div>
-   
-  </body>
-</html>
-
-    
+    // Render view on specified page
+    echo $twig->render('booking.html');
